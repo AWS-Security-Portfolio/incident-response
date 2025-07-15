@@ -28,7 +28,7 @@ This lab demonstrates AWS incident response and automation capabilities by simul
 
 ## Diagram
 
-![Incident Response Lab Diagram](diagram.png)
+
 
 ---
 
