@@ -24,7 +24,11 @@ Implemented real-time threat detection and automated response in AWS using Guard
 
 This lab demonstrates AWS incident response and automation capabilities by simulating a port scan attack against an EC2 instance, detecting the event with GuardDuty, investigating with CloudTrail, and automatically quarantining the affected EC2 using a Lambda function. The workflow closely resembles real-world cloud security operations and highlights the importance of detection, investigation, containment, and documentation.
 
-*A diagram of the overall process is available in the repository folder.
+---
+
+## Diagram
+
+![Incident Response Lab Diagram](diagram.png)
 
 ---
 
@@ -87,38 +91,27 @@ This lab demonstrates AWS incident response and automation capabilities by simul
 
 ## Screenshot Explanations
 
-1. GuardDuty-Enabled.png
-Enabled GuardDuty in the AWS Console to provide real-time threat detection across all resources in the selected region. This step is essential for receiving security findings and automating incident response.
+1. GuardDuty-Enabled.png: Enabled GuardDuty in the AWS Console to provide real-time threat detection across all resources in the selected region. This step is essential for receiving security findings and automating incident response.
 
-2. CloudTrail-TrailCreated.png
-Created a multi-region CloudTrail trail and configured log delivery to a dedicated S3 bucket. This ensures all API activity and security events are captured for auditing and investigation.
+2. CloudTrail-TrailCreated.png: Created a multi-region CloudTrail trail and configured log delivery to a dedicated S3 bucket. This ensures all API activity and security events are captured for auditing and investigation.
 
-3. CloudTrail-EventHistory.png
-Reviewed CloudTrail event history to verify logging and provide evidence of API events, including the simulation of a security incident and its detection.
+3. CloudTrail-EventHistory.png: Reviewed CloudTrail event history to verify logging and provide evidence of API events, including the simulation of a security incident and its detection.
 
-4. EC2-Instance-Running.png
-Launched an EC2 instance for testing incident detection and response. This screenshot confirms the instance was running and available for the lab.
+4. EC2-Instance-Running.png: Launched an EC2 instance for testing incident detection and response. This screenshot confirms the instance was running and available for the lab.
 
-5. EC2-SecurityGroup-SSH-Open.png
-Configured a Security Group to allow SSH (port 22) from any IP address. This configuration enabled the simulation of a port scan and demonstrated potential exposure.
+5. EC2-SecurityGroup-SSH-Open.png: Configured a Security Group to allow SSH (port 22) from any IP address. This configuration enabled the simulation of a port scan and demonstrated potential exposure.
 
-6. GuardDuty-Simulated-PortProbe-Finding.png
-Simulated a GuardDuty finding for a port probe reconnaissance event. This shows GuardDuty’s ability to detect suspicious network activity, even when triggered by sample data.
+6. GuardDuty-Simulated-PortProbe-Finding.png: Simulated a GuardDuty finding for a port probe reconnaissance event. This shows GuardDuty’s ability to detect suspicious network activity, even when triggered by sample data.
 
-7. Lambda-Code.png
-Developed a Python Lambda function that automatically creates and attaches a quarantine security group to an EC2 instance under investigation. The code enforces network isolation as a containment step.
+7. Lambda-Code.png: Developed a Python Lambda function that automatically creates and attaches a quarantine security group to an EC2 instance under investigation. The code enforces network isolation as a containment step.
 
-8. Lambda-Permissions.png
-Attached the necessary IAM permissions (AmazonEC2FullAccess and AWSLambdaBasicExecutionRole) to the Lambda execution role, enabling it to manage EC2 security groups and instances securely.
+8. Lambda-Permissions.png: Attached the necessary IAM permissions (AmazonEC2FullAccess and AWSLambdaBasicExecutionRole) to the Lambda execution role, enabling it to manage EC2 security groups and instances securely.
 
-9. Lambda-Quarantine-TestSuccess.png
-Successfully ran the Lambda function to quarantine the target EC2 instance. The output confirms the operation completed as expected.
+9. Lambda-Quarantine-TestSuccess.png: Successfully ran the Lambda function to quarantine the target EC2 instance. The output confirms the operation completed as expected.
 
-10. EC2-Quarantined-SecurityGroup.png
-Verified that the EC2 instance is now attached only to the quarantine security group, effectively cutting off all inbound network access.
+10. EC2-Quarantined-SecurityGroup.png: Verified that the EC2 instance is now attached only to the quarantine security group, effectively cutting off all inbound network access.
 
-11. QuarantineSG-NoInboundRules.png
-Reviewed the quarantine security group settings to confirm it has no inbound rules, providing proof that the instance is fully isolated from external traffic.
+11. QuarantineSG-NoInboundRules.png: Reviewed the quarantine security group settings to confirm it has no inbound rules, providing proof that the instance is fully isolated from external traffic.
 
 ---
 
