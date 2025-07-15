@@ -1,0 +1,13 @@
+## Incident Timeline
+
+| Time   | Action                                                      |
+|--------|-------------------------------------------------------------|
+| 19:25  | Simulated GuardDuty finding via AWS CLI.                    |
+| 19:28  | Verified GuardDuty finding in AWS Console.                  |
+| 19:29  | Reviewed CloudTrail event for CreateSampleFindings.         |
+| 19:35  | Created Lambda function for EC2 quarantine.                 |
+| 19:38  | Attached permissions to Lambda function.                    |
+| 19:44  | Lambda succeeded; EC2 instance quarantined.                 |
+| 19:46  | Confirmed quarantine security group attached.               |
+| 19:47  | Verified quarantine SG has no inbound rules.                |
+| 19:48  | Saved all screenshots for documentation.                    |

@@ -1,0 +1,20 @@
+{
+  "Reservations": [
+    {
+      "Instances": [
+        {
+          "InstanceId": "i-0abcd1234efgh5678",
+          "InstanceType": "t2.micro",
+          "State": {"Name": "running"},
+          "SecurityGroups": [
+            {
+              "GroupName": "quarantine-sg",
+              "GroupId": "sg-0123456789abcdef0"
+            }
+          ],
+          "PublicIpAddress": "203.0.113.25"
+        }
+      ]
+    }
+  ]
+}

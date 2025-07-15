@@ -1,0 +1,4 @@
+{
+  "statusCode": 200,
+  "body": "Instance i-0abcd1234efgh5678 quarantined with security group sg-0123456789abcdef0."
+}

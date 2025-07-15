@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "2.0",
+  "accountId": "123456789012",
+  "region": "us-east-1",
+  "id": "abcd1234-5678-90ef-ghij-klmnopqrstuv",
+  "type": "Recon:EC2/PortProbeUnprotectedPort",
+  "severity": 2,
+  "title": "Unprotected port on EC2 instance probed",
+  "description": "EC2 instance i-0abcd1234efgh5678 received a port scan.",
+  "resource": {
+    "instanceDetails": {
+      "instanceId": "i-0abcd1234efgh5678",
+      "instanceType": "t2.micro",
+      "networkInterfaces": [
+        {
+          "ipv4Addresses": ["203.0.113.25"]
+        }
+      ]
+    }
+  },
+  "service": {
+    "eventFirstSeen": "2025-07-13T19:25:00Z",
+    "eventLastSeen": "2025-07-13T19:26:00Z",
+    "count": 1
+  }
+}

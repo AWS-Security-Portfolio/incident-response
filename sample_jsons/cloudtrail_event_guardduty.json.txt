@@ -1,0 +1,19 @@
+{
+  "eventVersion": "1.08",
+  "userIdentity": {
+    "type": "IAMUser",
+    "userName": "admin-user"
+  },
+  "eventTime": "2025-07-13T19:25:31Z",
+  "eventSource": "guardduty.amazonaws.com",
+  "eventName": "CreateSampleFindings",
+  "awsRegion": "us-east-1",
+  "sourceIPAddress": "95.90.235.242",
+  "requestParameters": {
+    "findingTypes": [
+      "Recon:EC2/PortProbeUnprotectedPort"
+    ]
+  },
+  "responseElements": null,
+  "requestID": "d69e7bcf-6f91-49e2-bf0a-4d34958bfcd2"
+}
