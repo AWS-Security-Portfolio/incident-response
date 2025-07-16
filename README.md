@@ -7,6 +7,7 @@ Implemented real-time threat detection and automated response in AWS using Guard
 ## Table of Contents
 
 - [Overview]
+- [Diagram]
 - [Objectives]
 - [Steps Performed]
   - [1. GuardDuty Enablement]
