@@ -83,7 +83,7 @@ In real-world AWS environments, EC2 instances exposed to the internet are freque
 
 4. Incident Investigation
    - Reviewed GuardDuty findings in the AWS Console to confirm incident detection.
-   - Used CloudTrail event history to audit and investigate API calls related to the incident (Screenshots: CloudTrail-EventHistory.png & GuardDuty-Simulated-PortProbe-Finding.png)
+   - Used CloudTrail event history to audit and investigate API calls related to the incident (Screenshot: CloudTrail-EventHistory.png)
 
 5. Automate Quarantine Response with Lambda
    - Developed a Lambda function to create and apply a “quarantine” security group (no inbound rules) to the compromised EC2 instance (Screenshot: Lambda-Code.png)
