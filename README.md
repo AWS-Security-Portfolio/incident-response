@@ -69,32 +69,32 @@ In real-world AWS environments, EC2 instances exposed to the internet are freque
 
 ## Steps Performed
 
-1. Enable GuardDuty & CloudTrail
-- Enabled GuardDuty in the AWS Console for real-time threat detection (Screenshot: GuardDuty-Enabled.png)
-- Created a multi-region CloudTrail trail for centralized logging of all API activity (Screenshot: CloudTrail-TrailCreated.png)
+**1. Enable GuardDuty & CloudTrail**
+- Enabled GuardDuty in the AWS Console for real-time threat detection *(Screenshot: GuardDuty-Enabled.png)*
+- Created a multi-region CloudTrail trail for centralized logging of all API activity *(Screenshot: CloudTrail-TrailCreated.png)*
 
-2. Launch and Configure EC2 Test Instance
-- Deployed a new EC2 instance for incident simulation and response testing (Screenshot: EC2-Instance-Running.png)
-- Configured the instance’s security group to allow SSH (port 22) from any IP for lab purposes (Screenshot: EC2-SecurityGroup-SSH-Open.png)
+**2. Launch and Configure EC2 Test Instance**
+- Deployed a new EC2 instance for incident simulation and response testing *(Screenshot: EC2-Instance-Running.png)*
+- Configured the instance’s security group to allow SSH (port 22) from any IP for lab purposes *(Screenshot: EC2-SecurityGroup-SSH-Open.png)*
 
-3. Simulate Security Incident
+**3. Simulate Security Incident**
    - Simulated a port scan attack on the EC2 instance to trigger GuardDuty findings.
-   - Generated a GuardDuty sample finding when the real scan was not detected (Screenshot: GuardDuty-Simulated-PortProbe-Finding.png)
+   - Generated a GuardDuty sample finding when the real scan was not detected *(Screenshot: GuardDuty-Simulated-PortProbe-Finding.png)*
 
-4. Incident Investigation
+**4. Incident Investigation**
    - Reviewed GuardDuty findings in the AWS Console to confirm incident detection.
-   - Used CloudTrail event history to audit and investigate API calls related to the incident (Screenshot: CloudTrail-EventHistory.png)
+   - Used CloudTrail event history to audit and investigate API calls related to the incident *(Screenshot: CloudTrail-EventHistory.png)*
 
-5. Automate Quarantine Response with Lambda
-   - Developed a Lambda function to create and apply a “quarantine” security group (no inbound rules) to the compromised EC2 instance (Screenshot: Lambda-Code.png)
-   - Attached necessary IAM permissions to the Lambda execution role for EC2 control (Screenshot: Lambda-Permissions.png)
-   - Successfully ran the Lambda function to quarantine the EC2 instance, cutting off external access (Screenshot: Lambda-Quarantine-TestSuccess.png)
+**5. Automate Quarantine Response with Lambda**
+   - Developed a Lambda function to create and apply a “quarantine” security group (no inbound rules) to the compromised EC2 instance *(Screenshot: Lambda-Code.png)*
+   - Attached necessary IAM permissions to the Lambda execution role for EC2 control *(Screenshot: Lambda-Permissions.png)*
+   - Successfully ran the Lambda function to quarantine the EC2 instance, cutting off external access *(Screenshot: Lambda-Quarantine-TestSuccess.png)*
 
-6. Verify Quarantine and Isolation
-   - Confirmed the EC2 instance is now only associated with the quarantine security group (Screenshot: EC2-Quarantined-SecurityGroup.png)
-   - Verified the quarantine security group has no inbound rules, ensuring full network isolation (Screenshot: QuarantineSG-NoInboundRules.png)
+**6. Verify Quarantine and Isolation**
+   - Confirmed the EC2 instance is now only associated with the quarantine security group *(Screenshot: EC2-Quarantined-SecurityGroup.png)*
+   - Verified the quarantine security group has no inbound rules, ensuring full network isolation *(Screenshot: QuarantineSG-NoInboundRules.png)*
 
-7. Cleanup
+**7. Cleanup**
    - Terminated the EC2 test instance and deleted all custom security groups.
    - Removed the Lambda function and its IAM role.
    - Disabled GuardDuty and deleted the CloudTrail trail.
@@ -135,16 +135,16 @@ In real-world AWS environments, EC2 instances exposed to the internet are freque
 ## References
 
 - AWS GuardDuty Documentation
-  https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html
+  (https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html)
 
 - AWS CloudTrail Documentation
-  https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html
+  (https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html)
 
 - AWS Lambda Documentation
-  https://docs.aws.amazon.com/lambda/latest/dg/welcome.html
+  (https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
 
 - AWS Security Best Practices
-  https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-controls-reference.html
+  (https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-controls-reference.html)
 
 ---
 
