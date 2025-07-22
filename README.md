@@ -7,6 +7,8 @@ Implemented real-time threat detection and automated response in AWS using Guard
 ## Table of Contents
 
 - [Overview]
+- [Real-World Risk]
+- [What I Built]
 - [Diagram]
 - [Objectives]
 - [Steps Performed]
@@ -15,6 +17,7 @@ Implemented real-time threat detection and automated response in AWS using Guard
   - [3. EC2 Attack Simulation]
   - [4. Lambda Quarantine Automation]
   - [5. Documentation & Reflection]
+  - [6. Cleanup]
 - [Screenshots & Deliverables]
 - [Lessons Learned]
 - [References]
@@ -24,6 +27,24 @@ Implemented real-time threat detection and automated response in AWS using Guard
 ## Overview
 
 This lab demonstrates AWS incident response and automation capabilities by simulating a port scan attack against an EC2 instance, detecting the event with GuardDuty, investigating with CloudTrail, and automatically quarantining the affected EC2 using a Lambda function. The workflow closely resembles real-world cloud security operations and highlights the importance of detection, investigation, containment, and documentation.
+
+---
+
+## Real-World Risk
+
+In real-world AWS environments, EC2 instances exposed to the internet are frequent targets for automated scans, brute-force attacks, and exploitation attempts. Without continuous monitoring and rapid response, a single misconfiguration—such as an open port or weak credentials—can lead to compromise, unauthorized access, data loss, or the launch of further attacks from within your cloud. Automated incident response pipelines dramatically reduce the window of exposure by detecting threats in real time and isolating affected resources before an attacker can escalate their access.
+
+---
+
+## What I Built
+
+- Enabled AWS GuardDuty to detect real-time threats and reconnaissance against EC2 instances.
+- Configured CloudTrail for multi-region logging of all API and security events.
+- Launched and configured a test EC2 instance to simulate exposure and attack.
+- Simulated a port scan attack and/or injected a sample GuardDuty finding.
+- Investigated incidents using CloudTrail logs for full evidence tracking.
+- Developed a Lambda function to automatically quarantine compromised EC2 instances by applying a restrictive security group.
+- Documented the incident detection, response, and remediation process with a detailed playbook and evidence.
 
 ---
 
@@ -70,6 +91,14 @@ This lab demonstrates AWS incident response and automation capabilities by simul
    - Created a comprehensive playbook and timeline.
    - Added a personal reflection on lessons learned and future automation improvements.
 
+6. Cleanup
+   - Terminated all test EC2 instances and verified no resources are running.
+   - Deleted custom quarantine and test security groups.
+   - Removed the Lambda function and its associated IAM role.
+   - Disabled GuardDuty and deleted the CloudTrail trail.
+   - Emptied and deleted the S3 bucket used for CloudTrail logs.
+   - Double-checked the AWS billing dashboard to confirm no residual resources or costs.
+   
 ---
 
 ## Screenshots & Deliverables
