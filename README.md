@@ -51,7 +51,7 @@ In real-world AWS environments, EC2 instances exposed to the internet are freque
 
 ## Diagram
 
-![Incident Response Lab Diagram](Diagram.png)
+![Incident Response Lab Diagram](diagram.png)
 
 ---
 
@@ -134,17 +134,10 @@ In real-world AWS environments, EC2 instances exposed to the internet are freque
 
 ## References
 
-- AWS GuardDuty Documentation
-  (https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html)
-
-- AWS CloudTrail Documentation
-  (https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html)
-
-- AWS Lambda Documentation
-  (https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
-
-- AWS Security Best Practices
-  (https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-controls-reference.html)
+- [AWS GuardDuty Documentation](https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html)
+- [AWS CloudTrail Documentation](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html)
+- [AWS Lambda Documentation](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
+- [AWS Security Best Practices](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-controls-reference.html)
 
 ---
 
