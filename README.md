@@ -141,5 +141,6 @@ In real-world AWS environments, EC2 instances exposed to the internet are freque
 
 ---
 
-Sebastian Silva C. – July 2025 – Berlin, Germany
-[LinkedIn](https://www.linkedin.com/in/sebastiansilc/)[GitHub](https://github.com/SebaSilC)
+Sebastian Silva C. – July 2025 – Berlin, Germany.
+
+[LinkedIn](https://www.linkedin.com/in/sebastiansilc/)   [GitHub](https://github.com/SebaSilC)
