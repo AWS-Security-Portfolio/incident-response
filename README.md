@@ -6,12 +6,12 @@ Implemented real-time threat detection and automated response in AWS using Guard
 
 ## Table of Contents
 
-- [Overview]
-- [Real-World Risk]
-- [What I Built]
-- [Diagram]
-- [Objectives]
-- [Steps Performed]
+- [Overview](#overview)
+- [Real-World Risk](#real-world-risk)
+- [What I Built](#what-i-built)
+- [Diagram](#diagram)
+- [Objectives](#objectives)
+- [Steps Performed](#steps-performed)
   - [1. Enable GuardDuty & CloudTrail]
   - [2. Launch and Configure EC2 Test Instance]
   - [3. Simulate Security Incident]
@@ -19,9 +19,9 @@ Implemented real-time threat detection and automated response in AWS using Guard
   - [5. Automate Quarantine Response with Lambda]
   - [6. Verify Quarantine and Isolation]
   - [7. Cleanup]
-- [Screenshots & Deliverables]
-- [Lessons Learned]
-- [References]
+- [Screenshots and Deliverables](#screenshots-and-deliverables)
+- [Lessons Learned](#lessons-learned)
+- [References](#references)
 
 --- 
 
@@ -103,7 +103,7 @@ In real-world AWS environments, EC2 instances exposed to the internet are freque
    
 ---
 
-## Screenshots & Deliverables
+## Screenshots and Deliverables
 
 *All screenshots are included in the screenshots/ folder of this repository.*
 
