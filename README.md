@@ -22,6 +22,7 @@ Implemented real-time threat detection and automated response in AWS using Guard
 - [Screenshots and Deliverables](#screenshots-and-deliverables)
 - [Lessons Learned](#lessons-learned)
 - [References](#references)
+- [Contact](#contact)
 
 --- 
 
@@ -141,6 +142,7 @@ In real-world AWS environments, EC2 instances exposed to the internet are freque
 
 ---
 
-Sebastian Silva C. – July 2025 – Berlin, Germany.
-- [LinkedIn](https://www.linkedin.com/in/sebastiansilc/)
-- [GitHub](https://github.com/SebaSilC)
+## Contact
+
+Sebastian Silva C. – July 2025 – Berlin, Germany  
+[LinkedIn](https://www.linkedin.com/in/sebastiansilc) | [GitHub](https://github.com/SebaSilC) | [sebastian@playbookvisualarts.com](mailto:sebastian@playbookvisualarts.com)
