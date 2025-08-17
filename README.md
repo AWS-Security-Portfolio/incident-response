@@ -106,7 +106,7 @@ In real-world AWS environments, EC2 instances exposed to the internet are freque
 
 ## Screenshots and Deliverables
 
-*All screenshots are included in the screenshots/ folder of this repository.*
+*All screenshots are included in the `screenshots/` folder of this repository.*
 
 | Order | File Name                                 | What it Shows                                        |
 |-------|-------------------------------------------|------------------------------------------------------|
